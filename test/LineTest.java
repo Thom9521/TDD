@@ -31,4 +31,20 @@ public class LineTest {
         double length = line.calculateLength();
         assertEquals(5.0,length);
     }
+
+    @Test
+    void testLength2() {
+        Point a = new Point();
+        a.setX(5);
+        a.setY(2);
+
+        Point b = new Point();
+        b.setX(-7);
+        b.setY(1);
+
+        Line line = new Line(a,b);
+
+        double length = line.calculateLength();
+        assertEquals(12.041594578792296,length);
+    }
 }
